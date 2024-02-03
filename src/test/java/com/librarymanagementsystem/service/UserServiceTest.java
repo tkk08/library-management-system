@@ -14,6 +14,6 @@ class UserServiceTest {
 
     @Test
     void getUserInfoTest(){
-        assertThat(userService.getUserInfo(1)).isNotNull().isExactlyInstanceOf(User.class);
+        assertThat(userService.getUserInfo(0)).isNotNull().isExactlyInstanceOf(User.class);
     }
 }

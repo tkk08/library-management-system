@@ -42,28 +42,28 @@ public class AppData {
     public static Map<Integer, List<BookLog>> getUserBookMapping(){
         Map<Integer, List<BookLog>> bookLogPerUser = new HashMap<>();
         List<BookLog> bookLog = new ArrayList<>(){{
-            add(BookLog.builder().bookId(1).userId(1).startDate("2023-12-03")
-                    .endDate("2024-02-03")
+            add(BookLog.builder().bookId(1).userId(1).bookOrderedOn("2023-12-03")
+                    .bookValidUntil("2024-02-03")
                     .build());
-            add(BookLog.builder().bookId(4).userId(1).startDate("2023-10-03")
-                    .endDate("2024-02-03")
+            add(BookLog.builder().bookId(4).userId(1).bookOrderedOn("2023-10-03")
+                    .bookValidUntil("2024-02-03")
                     .build());
-            add(BookLog.builder().bookId(3).userId(1).startDate("2024-01-03")
-                    .endDate("2024-02-03")
+            add(BookLog.builder().bookId(3).userId(1).bookOrderedOn("2024-01-03")
+                    .bookValidUntil("2024-02-03")
                     .build());
         }};
         bookLogPerUser.put(1, bookLog);
         return bookLogPerUser;
     }
 
-    public static Map<Integer, BookStock> getBookStock(){
-        return new HashMap<>(){{
-            put(1, BookStock.builder().bookId(1).totalCopies(5).freeCopies(4).build());
-            put(2, BookStock.builder().bookId(2).totalCopies(5).freeCopies(5).build());
-            put(3, BookStock.builder().bookId(3).totalCopies(5).freeCopies(4).build());
-            put(4, BookStock.builder().bookId(4).totalCopies(5).freeCopies(5).build());
-            put(5, BookStock.builder().bookId(5).totalCopies(5).freeCopies(5).build());
-        }};
-    }
+//    public static Map<Integer, BookStock> getBookStock(){
+//        return new HashMap<>(){{
+//            put(1, BookStock.builder().bookId(1).totalCopies(5).freeCopies(4).build());
+//            put(2, BookStock.builder().bookId(2).totalCopies(5).freeCopies(5).build());
+//            put(3, BookStock.builder().bookId(3).totalCopies(5).freeCopies(4).build());
+//            put(4, BookStock.builder().bookId(4).totalCopies(5).freeCopies(5).build());
+//            put(5, BookStock.builder().bookId(5).totalCopies(5).freeCopies(5).build());
+//        }};
+//    }
 
 }

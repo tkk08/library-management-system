@@ -7,11 +7,9 @@ import lombok.Data;
 @Data
 @Builder
 @Generated
-public class BookLog {
-    int bookId;
-    int userId;
-    String bookOrderedOn;
-    String bookValidUntil;
-    String bookSubmissionDate;
-    boolean isPenaltySettled;
+public class BookCategory {
+    private int id;
+    private String category;
+    private String subCategory;
+
 }

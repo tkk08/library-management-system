@@ -1,4 +1,4 @@
-package com.librarymanagementsystem.model;
+package com.librarymanagementsystem.dto;
 
 import com.librarymanagementsystem.annotations.Generated;
 import lombok.Builder;
@@ -7,11 +7,11 @@ import lombok.Data;
 @Data
 @Builder
 @Generated
-public class BookLog {
-    int bookId;
-    int userId;
+public class BookLogDTO {
+    int id;
+    String name;
+    String author;
     String bookOrderedOn;
     String bookValidUntil;
     String bookSubmissionDate;
-    boolean isPenaltySettled;
 }

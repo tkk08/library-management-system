@@ -1,7 +1,7 @@
 package com.librarymanagementsystem.controller;
 
+import com.librarymanagementsystem.dto.BookLogDTO;
 import com.librarymanagementsystem.model.Book;
-import com.librarymanagementsystem.model.BookLog;
 import com.librarymanagementsystem.service.BookService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -33,11 +33,11 @@ class LibraryControllerTest {
 
     @Test
     void getBooksRegisteredByUserTest() {
-        List<BookLog> bookLogList = new ArrayList<>(){{
-            add(BookLog.builder().build());
+        List<BookLogDTO> bookLogList = new ArrayList<>(){{
+            add(BookLogDTO.builder().build());
         }};
         when(bookService.getBooksInUseByUser(1)).thenReturn(bookLogList);
-        Assertions.assertThat(libraryController.getBooksRegisteredByUser(1).get(0)).isNotNull().isInstanceOf(BookLog.class);
+        Assertions.assertThat(libraryController.getBooksRegisteredByUser(1).get(0)).isNotNull().isInstanceOf(BookLogDTO.class);
 
     }
 }
