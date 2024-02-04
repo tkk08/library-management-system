@@ -1,6 +1,6 @@
 package com.librarymanagementsystem.controller;
 
-import com.librarymanagementsystem.model.User;
+import com.librarymanagementsystem.model.UserAccount;
 import com.librarymanagementsystem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,7 +18,7 @@ public class UserController {
      * @return User Details
      */
     @GetMapping(path = "/users/{userId}")
-    public User getUserInfo(@PathVariable int userId){
+    public UserAccount getUserInfo(@PathVariable int userId){
         return userService.getUserInfo(userId);
     }
 }

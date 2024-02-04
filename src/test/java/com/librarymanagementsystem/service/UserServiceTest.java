@@ -1,6 +1,6 @@
 package com.librarymanagementsystem.service;
 
-import com.librarymanagementsystem.model.User;
+import com.librarymanagementsystem.model.UserAccount;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,6 +14,6 @@ class UserServiceTest {
 
     @Test
     void getUserInfoTest(){
-        assertThat(userService.getUserInfo(0)).isNotNull().isExactlyInstanceOf(User.class);
+        assertThat(userService.getUserInfo(0)).isNotNull().isExactlyInstanceOf(UserAccount.class);
     }
 }

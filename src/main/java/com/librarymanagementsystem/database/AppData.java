@@ -2,8 +2,7 @@ package com.librarymanagementsystem.database;
 
 import com.librarymanagementsystem.model.Book;
 import com.librarymanagementsystem.model.BookLog;
-import com.librarymanagementsystem.model.BookStock;
-import com.librarymanagementsystem.model.User;
+import com.librarymanagementsystem.model.UserAccount;
 
 import java.util.*;
 
@@ -29,9 +28,9 @@ public class AppData {
         }};
     }
 
-    public static List<User> getUserData(){
+    public static List<UserAccount> getUserData(){
         return new ArrayList<>(){{
-            add(User.builder().userId(1).name("Trupti")
+            add(UserAccount.builder().userId(1).name("Trupti")
                     .address("Brivibas iela 180- 30, Riga, Latvia 1012")
                     .phoneNumber("271 1234567")
                     .email("trupti.kokamkar@accenture.com")

@@ -1,6 +1,6 @@
 package com.librarymanagementsystem.controller;
 
-import com.librarymanagementsystem.model.User;
+import com.librarymanagementsystem.model.UserAccount;
 import com.librarymanagementsystem.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -20,7 +20,7 @@ class UserControllerTest {
 
     @Test
     void getUserInfoTest(){
-        when(userService.getUserInfo(1)).thenReturn(User.builder().build());
-        assertThat(userController.getUserInfo(1)).isNotNull().isExactlyInstanceOf(User.class);
+        when(userService.getUserInfo(1)).thenReturn(UserAccount.builder().build());
+        assertThat(userController.getUserInfo(1)).isNotNull().isExactlyInstanceOf(UserAccount.class);
     }
 }
